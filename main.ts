@@ -787,8 +787,14 @@ function Make_Tree () {
     Tree_Background.z = -1
 }
 statusbars.onZero(StatusBarKind.Health, function (status) {
-    info.setScore(Score)
+    info.setScore(Score + coinsCollected * 5)
     game.over(false)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    coinsCollected += 1
+    music.powerUp.play()
+    Duck.say("Nice job " + Name + "!", 500)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.TreeBackground, function (sprite, otherSprite) {
     if (!(Duck.overlapsWith(Tree))) {
@@ -830,13 +836,17 @@ function Health_Bar () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Tree, function (sprite, otherSprite) {
     Hit_By_Tree()
 })
+let Coin: Sprite = null
 let HealthBar: Sprite = null
+let coinsCollected = 0
 let Tree_Background: Sprite = null
 let Tree: Sprite = null
 let statusbar: StatusBarSprite = null
 let Duck: Sprite = null
 let Velocity = 0
 let Score = 0
+let Name = ""
+Name = game.askForString("What`s your name?")
 Duck_Set_Up()
 Health_Bar()
 Score = 0
@@ -964,6 +974,79 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
 Duck.setStayInScreen(true)
+game.onUpdateInterval(5000, function () {
+    Coin = sprites.createProjectileFromSide(img`
+        . . b b b b . . 
+        . b 5 5 5 5 b . 
+        b 5 d 3 3 d 5 b 
+        b 5 3 5 5 1 5 b 
+        c 5 3 5 5 1 d c 
+        c d d 1 1 d d c 
+        . f d d d d f . 
+        . . f f f f . . 
+        `, 3 * Velocity, 0)
+    Coin.setPosition(scene.screenWidth(), randint(20, 100))
+    animation.runImageAnimation(
+    Coin,
+    [img`
+        . . b b b b . . 
+        . b 5 5 5 5 b . 
+        b 5 d 3 3 d 5 b 
+        b 5 3 5 5 1 5 b 
+        c 5 3 5 5 1 d c 
+        c d d 1 1 d d c 
+        . f d d d d f . 
+        . . f f f f . . 
+        `,img`
+        . . b b b . . . 
+        . b 5 5 5 b . . 
+        b 5 d 3 d 5 b . 
+        b 5 3 5 1 5 b . 
+        c 5 3 5 1 d c . 
+        c 5 d 1 d d c . 
+        . f d d d f . . 
+        . . f f f . . . 
+        `,img`
+        . . . b b . . . 
+        . . b 5 5 b . . 
+        . b 5 d 1 5 b . 
+        . b 5 3 1 5 b . 
+        . c 5 3 1 d c . 
+        . c 5 1 d d c . 
+        . . f d d f . . 
+        . . . f f . . . 
+        `,img`
+        . . . b b . . . 
+        . . b 5 5 b . . 
+        . . b 1 1 b . . 
+        . . b 5 5 b . . 
+        . . b d d b . . 
+        . . c d d c . . 
+        . . c 3 3 c . . 
+        . . . f f . . . 
+        `,img`
+        . . . b b . . . 
+        . . b 5 5 b . . 
+        . b 5 1 d 5 b . 
+        . b 5 1 3 5 b . 
+        . c d 1 3 5 c . 
+        . c d d 1 5 c . 
+        . . f d d f . . 
+        . . . f f . . . 
+        `,img`
+        . . . b b b . . 
+        . . b 5 5 5 b . 
+        . b 5 d 3 d 5 b 
+        . b 5 1 5 3 5 b 
+        . c d 1 5 3 5 c 
+        . c d d 1 d 5 c 
+        . . f d d d f . 
+        . . . f f f . . 
+        `],
+    100,
+    true
+    )
+})
 game.onUpdateInterval(2000, function () {
     Make_Tree()
 })
