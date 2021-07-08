@@ -3,6 +3,7 @@ namespace SpriteKind {
     export const TreeBackgroung = SpriteKind.create()
     export const TreeBackground = SpriteKind.create()
     export const Health = SpriteKind.create()
+    export const TreeBackground2 = SpriteKind.create()
 }
 function Hit_By_Tree () {
     statusbar.value += -1
@@ -785,6 +786,312 @@ function Make_Tree () {
     Tree_Background.vx = Velocity
     Tree_Background.setFlag(SpriteFlag.AutoDestroy, true)
     Tree_Background.z = -1
+    Tree_Background2 = sprites.create(img`
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        dddddddddddddddd
+        `, SpriteKind.TreeBackground2)
+    Tree_Background2.setPosition(scene.screenWidth(), 0)
+    Tree_Background2.vx = Velocity
+    Tree_Background2.setFlag(SpriteFlag.AutoDestroy, true)
+    Tree_Background2.z = -1
 }
 statusbars.onZero(StatusBarKind.Health, function (status) {
     info.setScore(Score + coinsCollected * 5)
@@ -800,9 +1107,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.TreeBackground, function (sprite
     if (!(Duck.overlapsWith(Tree))) {
         music.baDing.play()
         Score += 1
-        Duck.setFlag(SpriteFlag.Ghost, true)
-        pause(1000)
-        Duck.setFlag(SpriteFlag.Ghost, false)
+        otherSprite.destroy()
     }
 })
 function Health_Bar () {
@@ -839,6 +1144,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Tree, function (sprite, otherSpr
 let Coin: Sprite = null
 let HealthBar: Sprite = null
 let coinsCollected = 0
+let Tree_Background2: Sprite = null
 let Tree_Background: Sprite = null
 let Tree: Sprite = null
 let statusbar: StatusBarSprite = null
